@@ -8,16 +8,19 @@ import lombok.Setter;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.io.Serializable;
+import java.util.UUID;
+
 @Entity
-@Table(name = "users")
+@Table(name = "tb_users")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class User {
+public class User implements Serializable {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private UUID idUser;
     private String name;
     private String email;
     private String password;

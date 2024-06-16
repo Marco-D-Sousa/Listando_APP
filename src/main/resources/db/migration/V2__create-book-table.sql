@@ -1,7 +1,0 @@
-CREATE TABLE tb_book (
-  id INT PRIMARY KEY,
-  title VARCHAR(120) NOT NULL,
-  author VARCHAR(40) UNIQUE NOT NULL,
-  user_id INTEGER,
-  FOREIGN KEY (user_id) REFERENCES tb_user(id) ON DELETE CASCADE
-);

@@ -6,17 +6,20 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.io.Serializable;
+import java.util.UUID;
+
 @Entity
-@Table(name = "books")
+@Table(name = "tb_books")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class Book {
+public class Book implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private UUID idBook;
     private String title;
     private String author;
 
