@@ -21,9 +21,9 @@ public class UserController {
 	UserRepository userRepository;
 	
 	@PostMapping("/users")
-	public ResponseEntity<User> saveUser(@RequestBody @Valid UserDTO userDto) {
+	public ResponseEntity<User> saveUser(@RequestBody @Valid UserDTO userDTO) {
 		var user = new User();
-		BeanUtils.copyProperties(userDto, user);
+		BeanUtils.copyProperties(userDTO, user);
 		return ResponseEntity.status(HttpStatus.CREATED).body(userRepository.save(user));
 	}
 	
@@ -63,3 +63,5 @@ public class UserController {
 		return ResponseEntity.status(HttpStatus.OK).body("User deleted");
 	}
 }
+
+//TODO Ajustar as validações e colocar os services

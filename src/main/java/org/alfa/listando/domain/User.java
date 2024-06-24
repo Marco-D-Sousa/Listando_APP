@@ -9,6 +9,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -24,5 +26,7 @@ public class User implements Serializable {
     private String name;
     private String email;
     private String password;
+    @OneToMany(mappedBy = "user")
+    private List<Book> books = new ArrayList<>();
 }
 

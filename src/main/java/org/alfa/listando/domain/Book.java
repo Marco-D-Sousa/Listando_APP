@@ -23,7 +23,7 @@ public class Book implements Serializable {
     private String title;
     private String author;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
 }
