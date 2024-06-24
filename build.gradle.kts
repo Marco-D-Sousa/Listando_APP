@@ -28,6 +28,8 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter-hateoas")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
+	implementation("com.password4j:password4j:1.8.2")
+	//implementation("org.springframework.boot:spring-boot-starter-security")
 
 	compileOnly("org.projectlombok:lombok")
 
